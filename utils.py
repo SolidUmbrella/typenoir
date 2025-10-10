@@ -11,14 +11,21 @@ def drawBackground(screen, color):
     screen.fill(color)
 
 def drawTitleText(screen, text, x, y):
-    font = pygame.font.SysFont('americantypewriter', 48)
+    font = pygame.font.SysFont([
+    "American Typewriter",
+    "Courier New",
+    "Courier",
+    "Liberation Mono",
+    "DejaVu Serif",
+    "Times New Roman"
+], 48)
     text = font.render(text, True, WHITE, BLACK)
     text_box = text.get_rect()
     text_box.topleft = (x,y)
     screen.blit(text, text_box)
 
 def drawText(screen, text, x, y, color, bgColor):
-    font = pygame.font.SysFont('menlo', 14)
+    font = pygame.font.SysFont(["Menlo", "Consolas", "DejaVu Sans Mono", "Courier New"], 14)
     text = font.render(text, True, color, bgColor)
     text_box = text.get_rect()
     text_box.topleft = (x,y)
@@ -53,7 +60,7 @@ def drawBoard(screen):
 
 class InputBox:
     def __init__(self, x, y, w, h, text=''):
-        FONT = pygame.font.SysFont('menlo', 64)
+        FONT = pygame.font.SysFont(["Menlo", "Consolas", "DejaVu Sans Mono", "Courier New"], 64)
         self.rect = pygame.Rect(x, y, w, h)
         self.color = BLACK
         self.text = text
@@ -66,7 +73,7 @@ class InputBox:
 
 
     def handle_event(self, event):
-        FONT = pygame.font.SysFont('menlo', 64)
+        FONT = pygame.font.SysFont(["Menlo", "Consolas", "DejaVu Sans Mono", "Courier New"], 64)
         # if event.type == pygame.MOUSEBUTTONDOWN:
         #     # If the user clicked on the input_box rect.
         #     if self.rect.collidepoint(event.pos):
@@ -126,7 +133,7 @@ class MenuElement():
         screen.blit(self.rend, self.rect)
 
     def set_rend(self):
-        font = pygame.font.SysFont('menlo', 14)
+        font = pygame.font.SysFont(["Menlo", "Consolas", "DejaVu Sans Mono", "Courier New"], 14)
         self.rend = font.render(self.text, True, self.get_color()[0], self.get_color()[1])
         
     def get_color(self): 
