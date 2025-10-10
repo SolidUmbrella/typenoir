@@ -4,8 +4,8 @@ A noir themed spelling game. Written in python. Files included are game script, 
 ## How To Play
 Keyboard controls only:
 
-(Left Shft) plays a hint
-(Right Shft) repeat word
+-(Left Shft) plays a hint
+-(Right Shft) repeat word
 
 See options menu for more detail
 
