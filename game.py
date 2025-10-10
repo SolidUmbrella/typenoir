@@ -7,7 +7,9 @@ from scene import SceneManager, TitleScene
 from utils import MenuElement, InputBox, drawBoard, drawText
 from engine import Camera, CameraSystem, State, Position
 
+
 pygame.init()
+
 screen = pygame.display.set_mode(SCREEN_SIZE)
 pygame.display.set_caption('type_noir')
 clock = pygame.time.Clock()
@@ -59,6 +61,7 @@ cameraSystem = CameraSystem()
 input_boxes = [input_box1]
 
 clicks = []
+mixer.init()
 for n in range(4):
     clicks.append(mixer.Sound('assets/clicks/kb_click'+str(n)+'.wav'))
 
@@ -69,7 +72,7 @@ idle = True
 # difficulty = 'EASY'
 current_word = ['']
 
-mixer.init()
+
 
 mixer.Channel(1).set_volume(1.5)
 
