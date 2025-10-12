@@ -18,3 +18,4 @@ See options menu for more detail
 python game.py
 ```
 
+![til](./type_noir-ezgif.com-video-to-gif-converter.gif)
