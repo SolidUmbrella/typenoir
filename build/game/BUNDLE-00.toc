@@ -1,1 +1,0 @@
-([('game', '/Users/bpg/Desktop/projects/type_noir/dist/game', 'EXECUTABLE')],)
